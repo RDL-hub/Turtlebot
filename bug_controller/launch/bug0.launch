@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <node pkg="bug_controller" type="followall.py" name="wall_follower" />
+    <node pkg="bug_controller" type="go2point.py" name="go_to_point" />
+    <node pkg="bug_controller" type="bug0.py" name="bug0" output="screen" />
+</launch>

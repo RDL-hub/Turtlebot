@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <rosparam file="$(find turtlebot3_gazebo)/config/navigation.yaml" command="load"/>
+   
+    <node name="move_base" pkg="move_base" type="move_base" output="screen" respawn="false"/>
+
+</launch>
+
+<!-- <?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+    <arg name="map" />
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find iris_turtlebot_bringup)/maps/$(arg map).yaml" />
+
+    <rosparam file="$(find iris_turtlebot_bringup)/param/navigation.yaml" command="load"/>
+
+    <node name="loc2d"     pkg="iris_rtk_ros" type="loc2d_ros" output="screen" respawn="true"/>
+    <node name="move_base" pkg="move_base"    type="move_base" output="screen" respawn="true">
+        <remap from="cmd_vel" to="/cmd_vel_mux/input/navigation"/>
+    </node>
+
+</launch> -->
+
+
+
+<!-- 
+<launch>
+
+    <rosparam file="$(find turtlebot3_gazebo)/config/navigation.yaml" command="load"/>
+    
+    <node name="loc2d"     pkg="iris_rtk_ros" type="loc2d_ros" output="screen" respawn="true"/>
+    <node name="move_base" pkg="move_base" type="move_base" output="screen" respawn="true">
+        <remap from="cmd_vel" to="/cmd_vel_mux/input/navigation"/>
+    </node>
+
+</launch> -->
